@@ -1,0 +1,41 @@
+---
+title: "nombre_viñeta"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{nombre_viñeta}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(pruebapaquetes)
+```
+
+La fución desarrollada, tiene como obetivo sumar dos 2 valores y dividirlos por 2. Eso para sacar el promedio
+
+```{r}
+mi_funcion(1,5)
+```
+
+```{r}
+mi_funcion(6,7)
+```
+
+```{r}
+mi_funcion(9,11)
+```
+
+```{r}
+mi_funcion(1003,44023)
+```
+
+```{r}
+mi_funcion(-122,-432)
+```

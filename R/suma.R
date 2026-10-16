@@ -2,6 +2,21 @@ suma<-function(x,y){
   x+y
 }
 
+#' Title
+#'
+#'Suma
+#'
+#'Esta función suma 2 numeros
+#' @param x Numeros positivos
+#' @param y Numeros positivos
+#'
+#' @returns vector con la suma de los numeros positivos
+#' @export
+#'
+#'
+#' @examples
+#' suma (1,1)
+#' suma (28,78)
 suma_string <- function(x, y) {
   if (is.character(x) || is.character(y)) {
     cli::cli_abort(
@@ -22,3 +37,5 @@ suma_negativos <-function(x,y){
     x+y
   }
 }
+
+

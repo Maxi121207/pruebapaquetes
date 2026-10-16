@@ -1,17 +1,18 @@
 Package: pruebapaquetes
 Title: Probando paquete de R
 Version: 0.0.0.9000
-Authors@R: 
-    person("Máximo Bustos", "maximorbustos@gmail.com", role = c("aut", "cre"))
-    person("Joaquin Larroux", "mail@gmal.com", role = c("aut", "cre"))
+Authors@R: person(given = "Máximo", family = "Bustos", email = "maximorbustos@gmail.com", role = c("aut", "cre"))
 Description: Estamos probando hacer un paquete de R para empezar a hacer.
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
-Config/roxygen2/version: 8.1.0
+License: MIT + file
+Config/roxygen2/version: 8.1.1
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-URL: https://github.com/Maxi121207/pruebapaquetes
+URL: https://github.com/Maxi121207/pruebapaquetes, https://maxi121207.github.io/pruebapaquetes/
 BugReports: https://github.com/Maxi121207/pruebapaquetes/issues
 Depends: 
     R (>= 3.5)
 LazyData: true
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
