@@ -31,7 +31,7 @@ pak::pak("Maxi121207/pruebapaquetes")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+El objetivo de este paquete es proporcionar a los usuarios distintos tipos de suma, para su uso diario.
 
 ```{r example}
 library(pruebapaquetes)
@@ -40,10 +40,26 @@ library(pruebapaquetes)
 
 What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
 
-```{r cars}
-summary(cars)
+```{r}
+mi_funcion(1,5)
 ```
 
+```{r}
+mi_funcion(6,7)
+```
+
+```{r}
+mi_funcion(9,11)
+```
+
+```{r}
+mi_funcion(1003,44023)
+```
+
+```{r}
+mi_funcion(-122,-432)
+```
+```
 You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this.
 
 You can also embed plots, for example:
