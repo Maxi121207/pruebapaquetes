@@ -1,40 +1,65 @@
-suma<-function(x,y){
-  x+y
-}
-
-#' Title
+#' Suma de dos numeros
 #'
-#'Suma
+#' Esta funcion suma 2 numeros.
 #'
-#'Esta función suma 2 numeros
 #' @param x Numeros positivos
 #' @param y Numeros positivos
 #'
-#' @returns vector con la suma de los numeros positivos
+#' @returns Vector con la suma de los numeros
 #' @export
 #'
+#' @examples
+#' suma(1, 1)
+#' suma(28, 78)
+suma <- function(x, y) {
+  x + y
+}
+
+#' Suma que rechaza texto
+#'
+#' Esta funcion suma 2 numeros y devuelve un error si alguno es texto.
+#'
+#' @param x Numeros positivos
+#' @param y Numeros positivos
+#'
+#' @returns Vector con la suma de los numeros positivos
+#' @export
 #'
 #' @examples
-#' suma (1,1)
-#' suma (28,78)
+#' suma_string(1, 1)
+#' suma_string(28, 78)
 suma_string <- function(x, y) {
   if (is.character(x) || is.character(y)) {
-    cli::cli_abort(
-      "No puedo sumar los elementos porque detecté un texto.",
-      "i" = "Asegúrate de ingresar solo valores numéricos."
-    )
+    cli::cli_abort(c(
+      "No puedo sumar los elementos porque detecte un texto.",
+      "i" = "Asegurate de ingresar solo valores numericos."
+    ))
   } else {
     x + y
   }
 }
 
-
-
-suma_negativos <-function(x,y){
-  if(x < 0 || y < 0 || x & y < 0){
-    print("No puedo sumar esos numeros")
-  }else{
-    x+y
+#' Suma que rechaza negativos
+#'
+#' Esta funcion suma 2 numeros y devuelve un error si alguno es negativo.
+#'
+#' @param x Numeros positivos
+#' @param y Numeros positivos
+#'
+#' @returns Vector con la suma de los numeros positivos
+#' @export
+#'
+#' @examples
+#' suma_negativos(1, 1)
+#' suma_negativos(28, 78)
+suma_negativos <- function(x, y) {
+  if (x < 0 || y < 0) {
+    cli::cli_abort(c(
+      "No puedo sumar esos numeros.",
+      "i" = "Asegurate de ingresar solo valores positivos."
+    ))
+  } else {
+    x + y
   }
 }
 

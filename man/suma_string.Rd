@@ -2,7 +2,7 @@
 % Please edit documentation in R/suma.R
 \name{suma_string}
 \alias{suma_string}
-\title{Title}
+\title{Suma que rechaza texto}
 \usage{
 suma_string(x, y)
 }
@@ -12,15 +12,12 @@ suma_string(x, y)
 \item{y}{Numeros positivos}
 }
 \value{
-vector con la suma de los numeros positivos
+Vector con la suma de los numeros positivos
 }
 \description{
-Suma
-}
-\details{
-Esta función suma 2 numeros
+Esta funcion suma 2 numeros y devuelve un error si alguno es texto.
 }
 \examples{
-suma (1,1)
-suma (28,78)
+suma_string(1, 1)
+suma_string(28, 78)
 }
