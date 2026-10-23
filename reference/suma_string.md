@@ -1,6 +1,6 @@
-# Title
+# Suma que rechaza texto
 
-Suma
+Esta funcion suma 2 numeros y devuelve un error si alguno es texto.
 
 ## Usage
 
@@ -20,17 +20,13 @@ suma_string(x, y)
 
 ## Value
 
-vector con la suma de los numeros positivos
-
-## Details
-
-Esta función suma 2 numeros
+Vector con la suma de los numeros positivos
 
 ## Examples
 
 ``` r
-suma (1,1)
-#> Error in suma(1, 1): could not find function "suma"
-suma (28,78)
-#> Error in suma(28, 78): could not find function "suma"
+suma_string(1, 1)
+#> [1] 2
+suma_string(28, 78)
+#> [1] 106
 ```
