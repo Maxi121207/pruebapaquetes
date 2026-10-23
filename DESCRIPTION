@@ -3,7 +3,7 @@ Title: Probando paquete de R
 Version: 0.0.0.9000
 Authors@R: person(given = "Máximo", family = "Bustos", email = "maximorbustos@gmail.com", role = c("aut", "cre"))
 Description: Estamos probando hacer un paquete de R para empezar a hacer.
-License: MIT + file
+License: MIT + file LICENSE
 Config/roxygen2/version: 8.1.1
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

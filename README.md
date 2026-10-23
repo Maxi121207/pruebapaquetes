@@ -5,6 +5,7 @@
 
 <!-- badges: start -->
 
+[![R-CMD-check](https://github.com/Maxi121207/pruebapaquetes/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Maxi121207/pruebapaquetes/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of pruebapaquetes is to …
