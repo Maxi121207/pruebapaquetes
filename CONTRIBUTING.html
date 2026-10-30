@@ -37,32 +37,33 @@
 
 <div id="contributing-to-pruebapaquetes" class="section level1">
 
-<p>This outlines how to propose a change to pruebapaquetes. For a detailed discussion on contributing to this and other tidyverse packages, please see the <a href="https://rstd.io/tidy-contrib" class="external-link">development contributing guide</a> and our <a href="https://code-review.tidyverse.org/" class="external-link">code review principles</a>.</p>
-<div class="section level2">
-<h2 id="fixing-typos">Fixing typos<a class="anchor" aria-label="anchor" href="#fixing-typos"></a></h2>
-<p>You can fix typos, spelling mistakes, or grammatical errors in the documentation directly using the GitHub web interface, as long as the changes are made in the <em>source</em> file. This generally means you’ll need to edit <a href="https://roxygen2.r-lib.org/articles/roxygen2.html" class="external-link">roxygen2 comments</a> in an <code>.R</code>, not a <code>.Rd</code> file. You can find the <code>.R</code> file that generates the <code>.Rd</code> by reading the comment in the first line.</p>
-</div>
-<div class="section level2">
-<h2 id="bigger-changes">Bigger changes<a class="anchor" aria-label="anchor" href="#bigger-changes"></a></h2>
-<p>If you want to make a bigger change, it’s a good idea to first file an issue and make sure someone from the team agrees that it’s needed. If you’ve found a bug, please file an issue that illustrates the bug with a minimal <a href="https://www.tidyverse.org/help/#reprex" class="external-link">reprex</a> (this will also help you write a unit test, if needed). See our guide on <a href="https://code-review.tidyverse.org/issues/" class="external-link">how to create a great issue</a> for more advice.</p>
-<div class="section level3">
-<h3 id="pull-request-process">Pull request process<a class="anchor" aria-label="anchor" href="#pull-request-process"></a></h3>
-<ul><li><p>Fork the package and clone onto your computer. If you haven’t done this before, we recommend using <code>usethis::create_from_github("Maxi121207/pruebapaquetes", fork = TRUE)</code>.</p></li>
-<li><p>Install all development dependencies with <code><a href="https://pak.r-lib.org/reference/local_install_dev_deps.html" class="external-link">pak::local_install_dev_deps()</a></code>, and then make sure the package passes <code>R CMD check</code> by running <code>devtools::check()</code>. If <code>R CMD check</code> doesn’t pass cleanly, it’s a good idea to ask for help before continuing.</p></li>
-<li><p>Create a Git branch for your pull request (PR). We recommend using <code>usethis::pr_init("brief-description-of-change")</code>.</p></li>
-<li><p>Make your changes and check that the package passes <code>R CMD check</code> by running <code>devtools::check()</code> again. Commit the changes to git, and then create a PR by running <code>usethis::pr_push()</code>, and follow the prompts in your browser. The title of your PR should briefly describe the change. The body of your PR should contain <code>Fixes #issue-number</code>.</p></li>
-<li><p>For user-facing changes, add a bullet to the top of <code>NEWS.md</code> (i.e. just below the first header). Follow the style described in <a href="https://style.tidyverse.org/news.html" class="external-link uri">https://style.tidyverse.org/news.html</a>.</p></li>
-</ul></div>
-<div class="section level3">
-<h3 id="code-style">Code style<a class="anchor" aria-label="anchor" href="#code-style"></a></h3>
-<ul><li><p>New code should follow the tidyverse <a href="https://style.tidyverse.org" class="external-link">style guide</a>. You can use <a href="https://posit-dev.github.io/air/" class="external-link">Air</a> to apply this style, but please don’t restyle code that has nothing to do with your PR.</p></li>
-<li><p>We use <a href="https://cran.r-project.org/package=roxygen2" class="external-link">roxygen2</a>, with <a href="https://cran.r-project.org/web/packages/roxygen2/vignettes/rd-formatting.html" class="external-link">Markdown syntax</a>, for documentation.</p></li>
-<li><p>We use <a href="https://cran.r-project.org/package=testthat" class="external-link">testthat</a> for unit tests. Contributions with test cases included are easier to accept.</p></li>
-</ul></div>
-</div>
+<p>Thank you for investing your time in contributing to our project! Any contribution you make will help improve this package.</p>
 <div class="section level2">
 <h2 id="code-of-conduct">Code of Conduct<a class="anchor" aria-label="anchor" href="#code-of-conduct"></a></h2>
-<p>Please note that the pruebapaquetes project is released with a <a href="CODE_OF_CONDUCT.html">Contributor Code of Conduct</a>. By contributing to this project you agree to abide by its terms.</p>
+<p>By participating in this project, you agree to abide by our Code of Conduct. Please read it before contributing.</p>
+</div>
+<div class="section level2">
+<h2 id="how-can-i-contribute">How Can I Contribute?<a class="anchor" aria-label="anchor" href="#how-can-i-contribute"></a></h2>
+<div class="section level3">
+<h3 id="reporting-bugs">Reporting Bugs<a class="anchor" aria-label="anchor" href="#reporting-bugs"></a></h3>
+<p>Before creating a bug report, please check the existing Issues list to see if the problem has already been reported. If it hasn’t, open a new issue and include: * A clear and descriptive title. * Steps to reproduce the behavior. * A minimal reproducible example (reprex) using the <code>reprex</code> package if possible. * Your R session information (<code><a href="https://rdrr.io/r/utils/sessionInfo.html" class="external-link">sessionInfo()</a></code>).</p>
+</div>
+<div class="section level3">
+<h3 id="suggesting-enhancements">Suggesting Enhancements<a class="anchor" aria-label="anchor" href="#suggesting-enhancements"></a></h3>
+<p>We welcome ideas for new features or improvements. To suggest an enhancement, please open an issue and: * Explain the behavior or feature you would like to see. * Provide examples of how it would be useful or how the syntax would look.</p>
+</div>
+<div class="section level3">
+<h3 id="submitting-pull-requests">Submitting Pull Requests<a class="anchor" aria-label="anchor" href="#submitting-pull-requests"></a></h3>
+<ol style="list-style-type: decimal"><li>Fork the repository and create your branch from <code>main</code>.</li>
+<li>If you’ve added code that should be tested, add tests in the <code>tests/testthat</code> directory.</li>
+<li>Ensure that the package passes all checks by running <code>devtools::check()</code>.</li>
+<li>Update the documentation if necessary using <code>devtools::document()</code>.</li>
+<li>Submit a pull request with a clear description of your changes.</li>
+</ol></div>
+</div>
+<div class="section level2">
+<h2 id="style-guide">Style Guide<a class="anchor" aria-label="anchor" href="#style-guide"></a></h2>
+<p>Please follow the tidyverse style guide (<code>styler</code> package can help format your code automatically) for any R code contributions.</p>
 </div>
 </div>
 
