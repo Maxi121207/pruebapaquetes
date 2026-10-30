@@ -1,49 +1,32 @@
 # Contributing to pruebapaquetes
 
-This outlines how to propose a change to pruebapaquetes.
-For a detailed discussion on contributing to this and other tidyverse packages, please see the [development contributing guide](https://rstd.io/tidy-contrib) and our [code review principles](https://code-review.tidyverse.org/).
-
-## Fixing typos
-
-You can fix typos, spelling mistakes, or grammatical errors in the documentation directly using the GitHub web interface, as long as the changes are made in the _source_ file. 
-This generally means you'll need to edit [roxygen2 comments](https://roxygen2.r-lib.org/articles/roxygen2.html) in an `.R`, not a `.Rd` file. 
-You can find the `.R` file that generates the `.Rd` by reading the comment in the first line.
-
-## Bigger changes
-
-If you want to make a bigger change, it's a good idea to first file an issue and make sure someone from the team agrees that it’s needed. 
-If you’ve found a bug, please file an issue that illustrates the bug with a minimal 
-[reprex](https://www.tidyverse.org/help/#reprex) (this will also help you write a unit test, if needed).
-See our guide on [how to create a great issue](https://code-review.tidyverse.org/issues/) for more advice.
-
-### Pull request process
-
-*   Fork the package and clone onto your computer. If you haven't done this before, we recommend using `usethis::create_from_github("Maxi121207/pruebapaquetes", fork = TRUE)`.
-
-*   Install all development dependencies with `pak::local_install_dev_deps()`, and then make sure the package passes `R CMD check` by running `devtools::check()`. 
-    If `R CMD check` doesn't pass cleanly, it's a good idea to ask for help before continuing.
-
-*   Create a Git branch for your pull request (PR). We recommend using `usethis::pr_init("brief-description-of-change")`.
-
-*   Make your changes and check that the package passes `R CMD check` by running `devtools::check()` again.
-    Commit the changes to git, and then create a PR by running `usethis::pr_push()`, and follow the prompts in your browser.
-    The title of your PR should briefly describe the change.
-    The body of your PR should contain `Fixes #issue-number`.
-
-*  For user-facing changes, add a bullet to the top of `NEWS.md` (i.e. just below the first header). Follow the style described in <https://style.tidyverse.org/news.html>.
-
-### Code style
-
-*   New code should follow the tidyverse [style guide](https://style.tidyverse.org). 
-    You can use [Air](https://posit-dev.github.io/air/) to apply this style, but please don't restyle code that has nothing to do with your PR.  
-
-*  We use [roxygen2](https://cran.r-project.org/package=roxygen2), with [Markdown syntax](https://cran.r-project.org/web/packages/roxygen2/vignettes/rd-formatting.html), for documentation.  
-
-*  We use [testthat](https://cran.r-project.org/package=testthat) for unit tests. 
-   Contributions with test cases included are easier to accept.  
+Thank you for investing your time in contributing to our project! Any contribution you make will help improve this package.
 
 ## Code of Conduct
 
-Please note that the pruebapaquetes project is released with a
-[Contributor Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this
-project you agree to abide by its terms.
+By participating in this project, you agree to abide by our Code of Conduct. Please read it before contributing.
+
+## How Can I Contribute?
+
+### Reporting Bugs
+Before creating a bug report, please check the existing Issues list to see if the problem has already been reported. If it hasn't, open a new issue and include:
+* A clear and descriptive title.
+* Steps to reproduce the behavior.
+* A minimal reproducible example (reprex) using the `reprex` package if possible.
+* Your R session information (`sessionInfo()`).
+
+### Suggesting Enhancements
+We welcome ideas for new features or improvements. To suggest an enhancement, please open an issue and:
+* Explain the behavior or feature you would like to see.
+* Provide examples of how it would be useful or how the syntax would look.
+
+### Submitting Pull Requests
+1. Fork the repository and create your branch from `main`.
+2. If you've added code that should be tested, add tests in the `tests/testthat` directory.
+3. Ensure that the package passes all checks by running `devtools::check()`.
+4. Update the documentation if necessary using `devtools::document()`.
+5. Submit a pull request with a clear description of your changes.
+
+## Style Guide
+
+Please follow the tidyverse style guide (`styler` package can help format your code automatically) for any R code contributions.
